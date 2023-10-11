@@ -12,7 +12,14 @@ function sortear(){
             let resultadoInformation = document.querySelector('.sorteador__resultados div p');
 
             tableResultado.classList.add('visible');
-            resultadoInformation.textContent = resultado;
+            if(resultado < 10000){
+                resultadoInformation.textContent = resultado;
+            } else {
+                let iconResultados = document.querySelector('.sorteador__resultados div');
+                iconResultados.style.cssText = 'width: 250px; border-radius: 30px;';
+                resultadoInformation.textContent = resultado;
+            }
+            
         }
 
     } else {
